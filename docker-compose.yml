@@ -1,0 +1,23 @@
+version: '2'
+services:
+  php:
+    image: yiisoftware/yii2-php:7.4-fpm-nginx
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./:/app:delegated
+    ports:
+      - '8000:80'
+    networks:
+      - meat-test
+  pgsql:
+    image: postgres
+    environment:
+      POSTGRES_DB: meat-test
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '127.0.0.1:5432:5432'
+    networks:
+      - meat-test
+networks:
+  meat-test:

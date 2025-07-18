@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "3ac943ba-d2a9-4012-a407-7c049afdb175",
+		"name": "meat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46875774",
+		"_collection_link": "https://galactic-satellite-4804742.postman.co/workspace/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80-%D0%9A%D1%80%D1%83%D0%BF%D0%BA%D0%B8%D0%BD's-Workspace~e491c429-4227-4070-8ed9-a6721b81b1ae/collection/46875774-3ac943ba-d2a9-4012-a407-7c049afdb175?action=share&source=collection_link&creator=46875774"
+	},
+	"item": [
+		{
+			"name": "orders",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "r2UlygKFYgfzWiQSTQnnOeW8PO0eAzwduwdiaCEM1n35BiGc4CxXASo0kO1AJSu9DSmKsOaoQWaXANoQXSJr78mxN77106iKaWBl7F0xRecQVUS8jrBA9Mi7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/2023.5.8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\": 1,\n\t\"products\": [\n\t\t{\n\t\t\t\"product_id\": 2,\n\t\t\t\"count\": 2\n\t\t}\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/orders/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"orders",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orders",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "r2UlygKFYgfzWiQSTQnnOeW8PO0eAzwduwdiaCEM1n35BiGc4CxXASo0kO1AJSu9DSmKsOaoQWaXANoQXSJr78mxN77106iKaWBl7F0xRecQVUS8jrBA9Mi7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/2023.5.8"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/orders?user_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "r2UlygKFYgfzWiQSTQnnOeW8PO0eAzwduwdiaCEM1n35BiGc4CxXASo0kO1AJSu9DSmKsOaoQWaXANoQXSJr78mxN77106iKaWBl7F0xRecQVUS8jrBA9Mi7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/2023.5.8"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/products/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"products",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/2023.5.8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"phone\": \"+79999999998\",\n\t\"password\": \"adminadmin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/site/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"site",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/2023.5.8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"phone\": \"+79999999998\",\n\t\"password\": \"adminadmin\",\n\t\"username\":\"adminadmin\",\n\t\"address\":\"adminadmin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login (token)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/2023.5.8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"gtFbxItaZ87qoZeaUvKghK50hm3-iy31WJ2AT-rLJalWPmhtVqOaOOpPK-7s0eEJya-mfP9yS1f6mw2B2i8gC_hmnkruWtnawaBk5j-guMSJO9fpMKVA204I\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/site/login-by-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"site",
+						"login-by-token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
